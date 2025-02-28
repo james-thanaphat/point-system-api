@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    container_name: point-system-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/var/www
+    networks:
+      - laravel_network
+
+networks:
+  laravel_network:
+    driver: bridge
